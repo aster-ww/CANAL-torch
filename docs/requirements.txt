@@ -15,3 +15,4 @@ scikit-learn
 torch
 anndata==0.8.0
 h5py==3.8.0
+einops
