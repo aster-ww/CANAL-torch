@@ -18,7 +18,7 @@ import sys
 from datetime import date
 from pathlib import Path
 import mock   
-MOCK_MODULES = ['numpy', 'scipy', 'matplotlib', 'matplotlib.pyplot', 'scipy.interpolate','torch','pandas','sklearn'] 
+MOCK_MODULES = ['numpy', 'scipy', 'matplotlib', 'matplotlib.pyplot', 'scipy.interpolate','torch','pandas','scikit-learn'] 
 for mod_name in MOCK_MODULES: 
     sys.modules[mod_name] = mock.Mock()
 # import git
