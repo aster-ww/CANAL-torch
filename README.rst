@@ -29,10 +29,11 @@ emerges.
       data is available, use ``CANAL_model.evaluation`` in the ``model``
       module to evaluate the performance of current fine-tuned model
 
-There are three examples in the ``Tutorial`` to run CANAL: >- Tutorial
-1: *Run CANAL with data stream from various batches* >- Tutorial 2: *Run
-CANAL with data stream from different tissues* >- Tutorial 3: *Apply
-CANAL on test data with novel cells*
+There are four examples in the ``Tutorial`` to run CANAL: 
+   - Tutorial 1: *Preprocess the raw scRNA-seq datasets*
+   - Tutorial 2: *Run CANAL with data stream from various batches* 
+   - Tutorial 3: *Run CANAL with data stream from different tissues* 
+   - Tutorial 4: *Apply CANAL on test data with novel cells*
 
 **Hyper-parameters**
 
