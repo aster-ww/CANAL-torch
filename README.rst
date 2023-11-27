@@ -7,13 +7,8 @@ that continuously fine-tunes a pretrained language model trained on a
 large amount of unlabeled scRNA-seq data, as new well-labeled data
 emerges.
 
-.. raw:: html
+|image|
 
-   <p align="center">
-
-.. raw:: html
-
-   </p>
 
 **To apply the CANAL model**:
 
@@ -64,3 +59,5 @@ Panglao dataset usded for pre-training can be seen at:
 https://github.com/TencentAILabHealthcare/scBERT
 
 If you have any questions, please contact: wanhui1997@pku.edu.cn
+
+.. |image| image:: https://github.com/aster-ww/CANAL-torch/blob/main/assets/framework.jpg
