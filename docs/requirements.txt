@@ -8,3 +8,4 @@ typing_extensions
 zarr
 sphinx_copybutton
 myst_parser
+mock
