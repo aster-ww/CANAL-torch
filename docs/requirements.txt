@@ -6,3 +6,4 @@ sphinx-rtd-theme
 sphinx_issues
 typing_extensions
 zarr
+sphinx_copybutton
