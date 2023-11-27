@@ -31,9 +31,9 @@ There are three examples in the `Tutorial` to run CANAL:
 
 |Link|Description|
 |----|-----------|
-|https://drive.google.com/drive/folders/1BMf-N-k-3aCEY7CJvUcK9nZZ2UD7p3C0?usp=sharing| Datasets of the pancreas experiemnts|
-|https://drive.google.com/drive/folders/1CaBySV_EFAPPrlpSevEewFds5cjJxC_T?usp=sharing| Datasets of the cross-tissue experiemnts |
-|https://drive.google.com/drive/folders/1OGMWxR7qTWd_p21d57EyNWv5X48BNN0M?usp=sharing| Datasets of the human immune experiemnts |
+|(https://drive.google.com/drive/folders/1BMf-N-k-3aCEY7CJvUcK9nZZ2UD7p3C0?usp=sharing)| Datasets of the pancreas experiemnts|
+|(https://drive.google.com/drive/folders/1CaBySV_EFAPPrlpSevEewFds5cjJxC_T?usp=sharing)| Datasets of the cross-tissue experiemnts |
+|(https://drive.google.com/drive/folders/1OGMWxR7qTWd_p21d57EyNWv5X48BNN0M?usp=sharing)| Datasets of the human immune experiemnts |
 
 The detailed information about pre-trained model checkpoint and the Panglao dataset usded for pre-training can be seen at: https://github.com/TencentAILabHealthcare/scBERT
 
