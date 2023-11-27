@@ -13,4 +13,5 @@ pandas
 scanpy
 scikit-learn
 torch
-scanpy
+anndata
+h5py
