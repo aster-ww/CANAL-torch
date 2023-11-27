@@ -1,20 +1,29 @@
 # CANAL: Continually adapting pre-trained language model to universal annotation of single-cell RNA-seq data
-PyTorch implementation of CANAL,  a universal cell-type annotation tool that continuously fine-tunes a pretrained language model trained on a large amount of unlabeled scRNA-seq data, as new well-labeled data emerges.
+PyTorch implementation of CANAL, a universal cell-type annotation tool that continuously fine-tunes a pretrained language model trained on a large amount of unlabeled scRNA-seq data, as new well-labeled data emerges.
 
 <p align="center">
-<img src="https://github.com/aster-ww/CANAL/blob/main/framework.jpg" width="1100" align="center">
+<img src="https://github.com/aster-ww/CANAL/blob/main/framework.jpg" width="700" align="center">
 </p>
 
-# File Descriptions and data requirement
+ ### To apply the CANAL model:
 
-Cell-type annotation of single-cell RNA-seq (scRNA-seq) data is a hallmark of biomedical research and clinical application. Current annotation tools usually assume the simultaneous acquisition of well-annotated data, but without the ability to expand knowledge from new data. Yet, such tools are inconsistent with the continuous emergence of scRNA-seq data, calling for a continuous cell-type annotation model. In addition, by their powerful ability of information integration and model interpretability, transformer-based pre-trained language models have led to breakthroughs in single-cell biology research.  We herein propose a universal cell-type annotation tool, called CANAL, that continuously fine-tunes a pretrained language model trained on a large amount of unlabeled scRNA-seq data, as new well-labeled data emerges. For model inputs, we designed an experience replay schema that repeatedly reviews previous vital examples in current training stages via a dynamic example bank with fixed buffer size. This example bank is class-balanced and good at memorizing and consolidating cell-type-specific information, as well as patterns of rare cell types. For model outputs, we utilize representation knowledge distillation to regularize the divergence between previous and current models, resulting in the preservation of knowledge learned from past training stages. Moreover, our universal annotation framework considers new cell types during both the fine-tuning and testing stages. 
+>- **prepare the preprocessed scRNA-seq data**: `gene_align` and `normalize` in the `preprocess` module are required to obtain AnnData objects for network inputs.
+>- **Run CANAL at the initial stage**: use `CANAL_model.train` in the `model` module by setting `current_stage=1`. The model is initialized by the pre-trained model checkpoint on the Panglao dataset
+>- **Run CANAL at the incremental stage**: use `CANAL_model.train` in the `model` module by setting `current_stage`≥1. The model is initialized by the model trained at previous stage
+>- **Predict cell types of the test data**: use `CANAL_model.predict` in the `model` module to obtain the predicted cell types of the test data
+>- **Evaluate model performance**: If true cell types of the test data is available, use `CANAL_model.evaluation` in the `model` module to evaluate the performance of current fine-tuned model
+
+There are three examples in the `Tutorial` to run CANAL:
+>- Tutorial 1: *Run CANAL with data stream from various batches*
+>- Tutorial 2: *Run CANAL with data stream from different tissues*
+>- Tutorial 3: *Apply CANAL on test data with novel cells*
 
 
- # Hyper-parameters and recommended settings
+ ## Hyper-parameters
 
->- lambda: default 0.1, the strength of representation distillation loss
+>- `lambda`: default 0.1, the strength of representation distillation loss
 >
->- L: default 1000, the size of example bank
+>- `L`: default 1000, the size of example bank
 >
 
 # Data Availability
@@ -25,5 +34,6 @@ Cell-type annotation of single-cell RNA-seq (scRNA-seq) data is a hallmark of bi
 |https://drive.google.com/drive/folders/1CaBySV_EFAPPrlpSevEewFds5cjJxC_T?usp=sharing| Datasets of the cross-tissue experiemnts |
 |https://drive.google.com/drive/folders/1OGMWxR7qTWd_p21d57EyNWv5X48BNN0M?usp=sharing| Datasets of the human immune experiemnts |
 
+The detailed information about pre-trained model checkpoint and the Panglao dataset usded for pre-training can be seen at: https://github.com/TencentAILabHealthcare/scBERT
 
 If you have any questions, please contact: wanhui1997@pku.edu.cn
