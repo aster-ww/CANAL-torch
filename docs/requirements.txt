@@ -9,3 +9,5 @@ zarr
 sphinx_copybutton
 myst_parser
 mock
+pandas
+scanpy
