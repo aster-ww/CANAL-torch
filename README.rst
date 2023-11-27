@@ -1,5 +1,5 @@
 .. inclusion-marker-do-not-remove
-CANAL: Continually adapting pre-trained language model to universal annotation of single-cell RNA-seq data
+Continually adapting pre-trained language model to universal annotation of single-cell RNA-seq data
 ==========================================================================================================
 
 PyTorch implementation of CANAL, a universal cell-type annotation tool
