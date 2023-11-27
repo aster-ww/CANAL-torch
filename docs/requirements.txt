@@ -1,6 +1,8 @@
-sphinx_rtd_theme
-nbsphinx     
-sphinx.ext.autodoc    
-sphinx.ext.napoleon        
-sphinx_copybutton     
-myst_parser
+nbsphinx
+scanpydoc
+sphinx
+sphinx-autodoc-typehints
+sphinx-rtd-theme
+sphinx_issues
+typing_extensions
+zarr
