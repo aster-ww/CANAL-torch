@@ -1,90 +1,29 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/SWHL/RapidVideOCR/main/assets/logo.png" width="55%" height="55%"/>
+# CANAL: Continually adapting pre-trained language model to universal annotation of single-cell RNA-seq data
+PyTorch implementation of CANAL,  a universal cell-type annotation tool that continuously fine-tunes a pretrained language model trained on a large amount of unlabeled scRNA-seq data, as new well-labeled data emerges.
 
-<div>&nbsp;</div>
-
-<a href="https://huggingface.co/spaces/SWHL/RapidVideOCR" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Hugging Face Demo-blue"></a>
-<a href="https://colab.research.google.com/github/SWHL/RapidVideOCR/blob/75dae6e9804dec6e61bef98334601908dc9ec9fb/assets/RapidVideOCRDemo.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg"></a>
-<a href=""><img src="https://img.shields.io/badge/Python->=3.6,<3.12-aff.svg"></a>
-<a href=""><img src="https://img.shields.io/badge/OS-Linux%2C%20Win%2C%20Mac-pink.svg"></a>
-<a href="https://pypi.org/project/rapid-videocr/"><img alt="PyPI" src="https://img.shields.io/pypi/v/rapid_videocr"></a>
-<a href="https://github.com/SWHL/RapidVideOCR/stargazers"><img src="https://img.shields.io/github/stars/SWHL/RapidVideOCR?color=ccf"></a>
-<a href="https://pepy.tech/project/rapid-videocr"><img src="https://static.pepy.tech/personalized-badge/rapid-videocr?period=total&units=abbreviation&left_color=grey&right_color=blue&left_text=Downloads"></a>
-<a href="https://semver.org/"><img alt="SemVer2.0" src="https://img.shields.io/badge/SemVer-2.0-brightgreen"></a>
-<a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
-
-[简体中文](https://github.com/SWHL/RapidVideOCR/blob/main/docs/README_zh.md) | English
-</div>
-
-<details>
-    <summary>Contents</summary>
-
-- [Introduction](#introduction)
-- [Demo](#demo)
-- [Overall framework](#overall-framework)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Documentation](#documentation)
-- [Code Contributors](#code-contributors)
-- [Contributing](#contributing)
-- [Sponsor](#sponsor)
-- [License](#license)
-
-</details>
-
-### Introduction
-- Video hard subtitle extraction, automatically generate the corresponding `srt | txt` file.
-- Supported subtitle languages: Chinese | English (For other supported languages, see: [List of supported languages](https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.1/doc/doc_ch/multi_languages.md#%E8%AF%AD%E7%A7%8D%E7%BC%A9%E5%86%99))
-- The advantages are as follows:
-   - **Faster extraction**: Used in conjunction with [VideoSubFinder](https://sourceforge.net/projects/videosubfinder/) software to extract key subtitle frames faster.
-   - **More accurate recognition**: Use [RapidOCR](https://github.com/RapidAI/RapidOCR) as the recognition library.
-   - **More convenient to use**: pip can be installed directly and used.
-- If it helps you, please give a star ⭐.
-
-### [Demo](https://huggingface.co/spaces/SWHL/RapidVideOCR)
-<div align="center">
-    <img src="https://github.com/SWHL/RapidVideOCR/releases/download/v2.0.1/OnlineDemo.gif" alt="Demo" width="100%" height="100%">
-</div>
-
-### Overall framework
-```mermaid
-flowchart LR
-    A[/Video/] --Extract subtitle key frame--> B(VideoSubFinder) --OCR-->C(RapidVideOCR)
-    C --Convert--> D[/"SRT | TXT"/]
-```
-
-### Installation
-```bash
-pip install rapid_videocr
-```
-
-### Usage
-```bash
-rapid_videocr -i RGBImages
-```
-
-### Documentation
-Full documentation can be found on [docs](https://swhl.github.io/RapidVideOCR/docs), in Chinese.
-
-### Code Contributors
-<p align="left">
-  <a href="https://github.com/SWHL/RapidVideOCR/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=SWHL/RapidVideOCR" width="20%"/>
-  </a>
+<p align="center">
+<img src="https://github.com/aster-ww/CANAL/blob/main/framework.jpg" width="1100" align="center">
 </p>
 
-### Contributing
-- Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-- Please make sure to update tests as appropriate.
+# File Descriptions and data requirement
 
-### [Sponsor](https://swhl.github.io/RapidVideOCR/docs/sponsor/)
+Cell-type annotation of single-cell RNA-seq (scRNA-seq) data is a hallmark of biomedical research and clinical application. Current annotation tools usually assume the simultaneous acquisition of well-annotated data, but without the ability to expand knowledge from new data. Yet, such tools are inconsistent with the continuous emergence of scRNA-seq data, calling for a continuous cell-type annotation model. In addition, by their powerful ability of information integration and model interpretability, transformer-based pre-trained language models have led to breakthroughs in single-cell biology research.  We herein propose a universal cell-type annotation tool, called CANAL, that continuously fine-tunes a pretrained language model trained on a large amount of unlabeled scRNA-seq data, as new well-labeled data emerges. For model inputs, we designed an experience replay schema that repeatedly reviews previous vital examples in current training stages via a dynamic example bank with fixed buffer size. This example bank is class-balanced and good at memorizing and consolidating cell-type-specific information, as well as patterns of rare cell types. For model outputs, we utilize representation knowledge distillation to regularize the divergence between previous and current models, resulting in the preservation of knowledge learned from past training stages. Moreover, our universal annotation framework considers new cell types during both the fine-tuning and testing stages. 
 
-If you want to sponsor the project, you can directly click the **Buy me a coffee** image, please write a note (e.g. your github account name) to facilitate adding to the sponsorship list below.
 
-<div align="left">
-  <a href="https://www.buymeacoffee.com/SWHL"><img src="https://raw.githubusercontent.com/RapidAI/.github/main/assets/buymeacoffe.png" width="30%" height="30%"></a>
-</div>
+ # Hyper-parameters and recommended settings
 
-### License
-This project is released under the [Apache 2.0 license](./LICENSE).
+>- lambda: default 0.1, the strength of representation distillation loss
+>
+>- L: default 1000, the size of example bank
+>
+
+# Data Availability
+
+|Link|Description|
+|----|-----------|
+|https://drive.google.com/drive/folders/1BMf-N-k-3aCEY7CJvUcK9nZZ2UD7p3C0?usp=sharing| Datasets of the pancreas experiemnts|
+|https://drive.google.com/drive/folders/1CaBySV_EFAPPrlpSevEewFds5cjJxC_T?usp=sharing| Datasets of the cross-tissue experiemnts |
+|https://drive.google.com/drive/folders/1OGMWxR7qTWd_p21d57EyNWv5X48BNN0M?usp=sharing| Datasets of the human immune experiemnts |
+
+
+If you have any questions, please contact: wanhui1997@pku.edu.cn
