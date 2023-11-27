@@ -15,7 +15,7 @@ emerges.
 
    </p>
 
-### To apply the CANAL model:
+**To apply the CANAL model**:
 
    -  **prepare the preprocessed scRNA-seq data**: ``gene_align`` and
       ``normalize`` in the ``preprocess`` module are required to obtain
@@ -39,7 +39,7 @@ There are three examples in the ``Tutorial`` to run CANAL: >- Tutorial
 CANAL with data stream from different tissues* >- Tutorial 3: *Apply
 CANAL on test data with novel cells*
 
-## Hyper-parameters
+**Hyper-parameters**
 
    -  ``lambda``: default 0.1, the strength of representation
       distillation loss
@@ -49,30 +49,15 @@ CANAL on test data with novel cells*
 Data Availability
 =================
 
-+------------------+---------------------------------------------------+
-| Link             | Description                                       |
-+==================+===================================================+
-| http             | Datasets of the pancreas experiemnts              |
-| s://drive.google |                                                   |
-| .com/drive/folde |                                                   |
-| rs/1BMf-N-k-3aCE |                                                   |
-| Y7CJvUcK9nZZ2UD7 |                                                   |
-| p3C0?usp=sharing |                                                   |
-+------------------+---------------------------------------------------+
-| http             | Datasets of the cross-tissue experiemnts          |
-| s://drive.google |                                                   |
-| .com/drive/folde |                                                   |
-| rs/1CaBySV_EFAPP |                                                   |
-| rlpSevEewFds5cjJ |                                                   |
-| xC_T?usp=sharing |                                                   |
-+------------------+---------------------------------------------------+
-| http             | Datasets of the human immune experiemnts          |
-| s://drive.google |                                                   |
-| .com/drive/folde |                                                   |
-| rs/1OGMWxR7qTWd_ |                                                   |
-| p21d57EyNWv5X48B |                                                   |
-| NN0M?usp=sharing |                                                   |
-+------------------+---------------------------------------------------+
++-----------------------------------------------------------------------------------------+---------------------------------------------------+
+| Link                                                                                    | Description                                       |
++=========================================================================================+===================================================+
+| https://drive.google.com/drive/folders/1BMf-N-k-3aCEY7CJvUcK9nZZ2UD7p3C0?usp=sharing    | Datasets of the pancreas experiemnts              |
++-----------------------------------------------------------------------------------------+---------------------------------------------------+
+| https://drive.google.com/drive/folders/1CaBySV_EFAPPrlpSevEewFds5cjJxC_T?usp=sharing    | Datasets of the cross-tissue experiemnts          |
++-----------------------------------------------------------------------------------------+---------------------------------------------------+
+| https://drive.google.com/drive/folders/1OGMWxR7qTWd_p21d57EyNWv5X48BNN0M?usp=sharing    | Datasets of the human immune experiemnts          |
++-----------------------------------------------------------------------------------------+---------------------------------------------------+
 
 The detailed information about pre-trained model checkpoint and the
 Panglao dataset usded for pre-training can be seen at:
