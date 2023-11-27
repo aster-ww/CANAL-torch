@@ -65,6 +65,14 @@ html_theme_options = {
     "titles_only": False,
 }
 
+html_context = {
+    # Github options
+    "display_github": True,
+    "github_user": "aster-ww",
+    "github_repo": "CANAL-torch",
+    "github_version": "main",
+    "conf_py_path": "/docs/source/",
+}
 html_logo = "./_static/logo.png"
 html_static_path = ['_static']
 html_js_files = ['my_custom.js', ]
