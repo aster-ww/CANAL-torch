@@ -11,3 +11,6 @@ myst_parser
 mock
 pandas
 scanpy
+scikit-learn
+torch
+scanpy
