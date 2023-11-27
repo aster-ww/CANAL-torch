@@ -5,6 +5,7 @@ PyTorch implementation of CANAL, a universal cell-type annotation tool that cont
 <img src="https://github.com/aster-ww/CANAL/blob/main/framework.jpg" width="700" align="center">
 </p>
 
+ ## Detailed usage of CANAL can be seen at [readthedocs page](https://canal-torch.readthedocs.io/)
  ### To apply the CANAL model:
 
 >- **prepare the preprocessed scRNA-seq data**: `gene_align` and `normalize` in the `preprocess` module are required to obtain AnnData objects for network inputs.
