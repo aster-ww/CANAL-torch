@@ -56,7 +56,7 @@ Data Availability
 +-----------------------------------------------------------------------------------------+---------------------------------------------------+
 
 The detailed information about pre-trained model checkpoint and the
-Panglao dataset usded for pre-training can be seen at:
+Panglao dataset used for pre-training can be seen at:
 https://github.com/TencentAILabHealthcare/scBERT
 
 If you have any questions, please contact: wanhui1997@pku.edu.cn
