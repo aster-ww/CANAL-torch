@@ -24,10 +24,10 @@ for mod_name in MOCK_MODULES:
 # import git
 
 sys.path.insert(0, str(Path("../..").absolute()))
-sys.path.insert(0, os.path.abspath('../../code'))
-sys.path.append(os.path.abspath('../../Tutorial'))
-# # from CANAL import __version__
-# sys.path.insert(0, os.path.abspath('../../Tutorial'))
+# sys.path.insert(0, os.path.abspath('../../code'))
+# sys.path.append(os.path.abspath('../../Tutorial'))
+# # # from CANAL import __version__
+# # sys.path.insert(0, os.path.abspath('../../Tutorial'))
 
 # -- Project information -----------------------------------------------------
 
