@@ -55,7 +55,7 @@ Data Availability
 | https://drive.google.com/drive/folders/1OGMWxR7qTWd_p21d57EyNWv5X48BNN0M?usp=sharing    | Datasets of the human immune experiemnts          |
 +-----------------------------------------------------------------------------------------+---------------------------------------------------+
 
-The detailed information about pre-trained model checkpoint and the
+The detailed information and download url of pre-trained model checkpoint, gene2vec embedding and the
 Panglao dataset used for pre-training can be seen at:
 https://github.com/TencentAILabHealthcare/scBERT
 
