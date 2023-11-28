@@ -116,4 +116,4 @@ https://github.com/TencentAILabHealthcare/scBERT
 If you have any questions, please contact: wanhui1997@pku.edu.cn
 
 .. |image| image:: ../../assets/framework.png
-  :width: 400
+  :width: 700
