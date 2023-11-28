@@ -35,6 +35,6 @@ There are three examples in the `Tutorial` to run CANAL:
 |(https://drive.google.com/drive/folders/1CaBySV_EFAPPrlpSevEewFds5cjJxC_T?usp=sharing)| Datasets of the cross-tissue experiemnts |
 |(https://drive.google.com/drive/folders/1OGMWxR7qTWd_p21d57EyNWv5X48BNN0M?usp=sharing)| Datasets of the human immune experiemnts |
 
-The detailed information and download url of pre-trained model checkpoint, gene2vec embedding and the Panglao dataset used for pre-training can be seen at: https://github.com/TencentAILabHealthcare/scBERT
+The detailed information and download URL of pre-trained model checkpoint, gene2vec embedding and the Panglao dataset used for pre-training can be seen at: https://github.com/TencentAILabHealthcare/scBERT
 
 If you have any questions, please contact: wanhui1997@pku.edu.cn
