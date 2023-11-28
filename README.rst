@@ -65,7 +65,7 @@ CANAL requires the following:
 
 To apply the CANAL model:
 =================
-   -  **prepare the preprocessed scRNA-seq data**: ``gene_align`` and
+   -  **Prepare the preprocessed scRNA-seq data**: ``gene_align`` and
       ``normalize`` in the ``preprocess`` module are required to obtain
       AnnData objects for network inputs.
    -  **Run CANAL at the initial stage**: use ``CANAL_model.train`` in
