@@ -471,6 +471,7 @@ class CANAL_model():
         :dataset (str): name of the dataset used during the given stage
         :novel (bool): whether to detect novel cells in the test data, default value is False. If True, we will annotate cells as "Unassigned", if their uncertainty score is larger than the automatic determined threshold.
         :temperature (float): the temperature parameter in the energy function if novel cell detection is needed. The default value is 0.8
+        
         :return: an array, which provides predicted cell types of the test dataset
 
         """
