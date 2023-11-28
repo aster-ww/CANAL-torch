@@ -8,7 +8,7 @@ PyTorch implementation of CANAL, a universal cell-type annotation tool that cont
  ## Detailed usage of CANAL can be seen at [readthedocs page](https://canal-torch.readthedocs.io/)
  ### To apply the CANAL model:
 
->- **prepare the preprocessed scRNA-seq data**: `gene_align` and `normalize` in the `preprocess` module are required to obtain AnnData objects for network inputs.
+>- **Prepare the preprocessed scRNA-seq data**: `gene_align` and `normalize` in the `preprocess` module are required to obtain AnnData objects for network inputs.
 >- **Run CANAL at the initial stage**: use `CANAL_model.train` in the `model` module by setting `current_stage=1`. The model is initialized by the pre-trained model checkpoint on the Panglao dataset
 >- **Run CANAL at the incremental stage**: use `CANAL_model.train` in the `model` module by setting `current_stage`≥1. The model is initialized by the model trained at previous stage
 >- **Predict cell types of the test data**: use `CANAL_model.predict` in the `model` module to obtain the predicted cell types of the test data
