@@ -13,6 +13,5 @@ Welcome to CANAL's documentation!
    :caption: Contents:
    
    self    
-   install    
    api    
    tut
