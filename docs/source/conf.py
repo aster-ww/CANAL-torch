@@ -17,14 +17,11 @@ import inspect
 import sys
 from datetime import date
 from pathlib import Path
-import mock   
-# MOCK_MODULES = ['numpy', 'scipy','scipy.sparse' 'matplotlib', 'matplotlib.pyplot', 'scipy.interpolate','torch','pandas','scikit-learn','anndata'] 
-# for mod_name in MOCK_MODULES: 
-#     sys.modules[mod_name] = mock.Mock()
+
 # import git
 
 sys.path.insert(0, str(Path("../..").absolute()))
-sys.path.insert(0, os.path.abspath('../../code'))
+sys.path.insert(0, os.path.abspath('../../CANAL'))
 # sys.path.append(os.path.abspath('../../Tutorial'))
 # # # from CANAL import __version__
 # # sys.path.insert(0, os.path.abspath('../../Tutorial'))
@@ -76,7 +73,7 @@ html_context = {
 html_logo = "./_static/logo.png"
 html_static_path = ['_static']
 html_js_files = ['my_custom.js', ]
-autoapi_dirs = ["../../code"]
+autoapi_dirs = ["../../CANAL"]
 
 def setup(app):
     app.add_css_file('my_theme.css')
