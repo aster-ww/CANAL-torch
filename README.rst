@@ -9,11 +9,11 @@ emerges.
 
 |image|
 
-==========================================================================================================
-The source code of CANAL is available at https://github.com/aster-ww/CANAL-torch
+
+The source code of CANAL is available at https://github.com/aster-ww/CANAL-torch/tree/main/CANAL
 
 **Dependencies**
-==========================================================================================================
+=================
 CANAL requires the following:
 
 - python_  (3.7 recommended)
@@ -62,9 +62,9 @@ CANAL requires the following:
 
 .. _`nvidia cudnn`: https://developer.nvidia.com/cudnn
 
-==========================================================================================================
-**To apply the CANAL model**:
 
+To apply the CANAL model:
+=================
    -  **prepare the preprocessed scRNA-seq data**: ``gene_align`` and
       ``normalize`` in the ``preprocess`` module are required to obtain
       AnnData objects for network inputs.
@@ -82,7 +82,8 @@ CANAL requires the following:
       data is available, use ``CANAL_model.evaluation`` in the ``model``
       module to evaluate the performance of current fine-tuned model
 
-There are four examples in the ``Tutorial`` to run CANAL: 
+**There are four examples in the** ``Tutorial`` **to run CANAL**:
+
    - Tutorial 1: *Preprocess the raw scRNA-seq datasets*
    - Tutorial 2: *Run CANAL with data stream from various batches* 
    - Tutorial 3: *Run CANAL with data stream from different tissues* 
