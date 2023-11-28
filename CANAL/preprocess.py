@@ -43,7 +43,7 @@ def normalize(adata_aligned, experiments, dir, min_genes = 200, highly_gene_num 
     :min_genes (int): the minimum expressed gene number of a cell
     :highly_gene_num (int): preserved number of highly variable genes
 
-    return: an AnnData object of the preprocessed scRNA-seq dataset
+    :return: an AnnData object of the preprocessed scRNA-seq dataset
     """
     total_gene = adata_aligned.var.index
     sc.pp.filter_cells(adata_aligned, min_genes=min_genes)
